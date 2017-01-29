@@ -5,10 +5,11 @@ public class Application
 {
     private boolean monkeyTrouble(boolean aSmile, boolean bSmile)
     {
-        Monkey monkey_a = new Monkey();
-        Monkey monkey_b = new Monkey();
+        Monkey monkey_a = new Monkey(aSmile);
+        Monkey monkey_b = new Monkey(bSmile);
 
-        if (monkey_a.isSmiling(aSmile) == monkey_b.isSmiling(bSmile))
+
+        if (monkey_a.getValue() == monkey_b.getValue())
             return true;
 
         return false;
@@ -17,6 +18,6 @@ public class Application
     {
         Application application = new Application();
 
-        System.out.println(application.monkeyTrouble(true,false));
+        System.out.println(application.monkeyTrouble(true,true));
     }
 }

@@ -3,10 +3,17 @@
  */
 public class Monkey
 {
-    boolean isSmiling(boolean smile)
+    private boolean smile;
+
+   public Monkey (){}
+
+    public Monkey (boolean smile)
     {
-        if (smile)
-            return true;
-        return false;
+        this.smile = smile;
+    }
+
+    public boolean getValue()
+    {
+        return smile;
     }
 }
